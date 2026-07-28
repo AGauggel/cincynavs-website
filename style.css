@@ -1,0 +1,217 @@
+:root {
+  --ink: #2B2013;
+  --paper: #EFE2C4;
+  --muted: #7C6B49;
+  --line: #D8C89C;
+  --accent: #9C5B22;
+  --accent-soft: #C17A2E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 1.02rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(168,121,31,0.35); }
+a:hover { border-bottom-color: var(--accent); }
+
+/* ===== HEADER ===== */
+header {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 40px 24px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.brand img { width: 22px; height: 22px; }
+.brand a { border-bottom: none; color: var(--ink); }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  font-size: 0.92rem;
+}
+nav a { border-bottom: none; color: var(--ink); }
+nav a:hover { color: var(--accent); }
+nav a.current { color: var(--accent); border-bottom: 1px solid var(--accent); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 30px 0;
+}
+
+/* ===== CAPTION / SIGNAGE STYLE ===== */
+.caption {
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.hero h1 { font-size: 2.3rem; }
+
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* ===== HERO — text only (home) ===== */
+.hero p {
+  max-width: 46ch;
+  color: var(--ink);
+}
+.hero .sub {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* ===== PHOTO STRIP (home) ===== */
+.photo-lead { width: 100%; margin-bottom: 16px; }
+.photo-lead img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+}
+.photo-lead .caption { margin-top: 6px; display: block; }
+
+.photo-pair {
+  display: flex;
+  gap: 14px;
+}
+.photo-item { flex: 1 1 0; min-width: 0; }
+.photo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
+.photo-item .caption { margin-top: 6px; display: block; }
+
+/* ===== STUDENT QUOTE — the one warm register (home) ===== */
+.quote {
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--ink);
+  max-width: 48ch;
+  line-height: 1.6;
+}
+.quote-attr {
+  margin-top: 8px;
+  font-style: normal;
+}
+.quote-attr .caption { display: inline; }
+
+/* ===== ENTRIES LIST — Nav Night / Bible study / coffee (home) ===== */
+.entry { padding: 4px 0; }
+.entry-title {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--ink);
+}
+.entry-title .when { color: var(--muted); font-style: normal; }
+.entry p.desc {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.entry.primary .entry-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.entry.primary .entry-title .when { color: var(--accent-soft); }
+.entry.primary p.desc { color: var(--ink); }
+
+.connector {
+  text-align: center;
+  color: var(--line);
+  font-size: 1.1rem;
+  margin: 2px 0;
+  letter-spacing: 0.2em;
+}
+
+/* ===== ABOUT TEASER (home) ===== */
+.about-teaser p { max-width: 50ch; }
+
+/* ===== ABOUT PAGE SECTIONS ===== */
+section p { max-width: 54ch; }
+section p + p { margin-top: 14px; }
+
+.placeholder-note {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.86rem;
+  color: var(--accent-soft);
+  font-style: italic;
+}
+
+.team-list { margin-top: 6px; }
+.team-member { padding: 10px 0; }
+.team-list.tight .team-member { padding: 3px 0; }
+.team-member .name {
+  font-weight: bold;
+  color: var(--ink);
+}
+.team-member .role {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 24px 50px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+footer .foot-links { margin-top: 10px; }
+footer .foot-links a { margin-right: 16px; }
+footer .updated { margin-top: 22px; font-size: 0.82rem; }
+
+@media (max-width: 480px) {
+  header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  nav ul { gap: 16px; padding-left: 0; }
+}
